@@ -1,0 +1,19 @@
+$if[$message[1]!= ]
+$title[ ATM ]
+$description[
+
+Você Tem $getVar[yens;$authorID] Yenes Em Mãos
+Você Tem $getVar[banco;$authorID] Yenes No Banco]
+$footer[ I Like Cats :3 ]
+$addTimestamp
+$endif
+
+$if[$message[1]!=$mentioned[1]]
+$title[ ATM ]
+$description[
+
+$username[$mentioned[1]] Tem $getVar[yens;$mentioned[1]] Yenes Em Mãos
+$username[$mentioned[1]] Tem $getVar[banco;$mentioned[1]] Yenes No Banco]
+$footer[ I Like Cats :3 ]
+$addTimestamp
+$endif
