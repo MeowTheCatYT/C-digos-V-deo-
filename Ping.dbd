@@ -1,0 +1,8 @@
+$nomention
+$title[ Pong 🏓 ]
+$description[ 
+Ping do Bot : $pingms
+ShardID : $shardID[$guildID]
+]
+$footer[ Novo Comando Pra o YT ]
+$color[00FF00]
