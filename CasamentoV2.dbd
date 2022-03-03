@@ -50,3 +50,9 @@ $endif
 
 
 Parte 1 Tá no Canal DBD BR : https://youtu.be/rJ6mssCD1Hk
+
+
+Cole isso no {prefix}casar
+
+$onlyIf[$getVar[aliança;$authorID]==✅;você não tem aliança!]
+$onlyIf[$getVar[aliança;$mentioned[1]]==✅;o usuário mencionado não tem aliança!]
