@@ -1,0 +1,52 @@
+Crie um Comando Chamado {prefix}loja
+
+$nomention
+$title[ Loja 🏪 ]
+$description[
+Clique no Botão Para Ver os Itens!]
+$addButton[no;Ite;Loja🏪;danger;no]
+
+Depois um $onInteraction[Ite]
+
+$nomention
+$ephemeral
+$title[ Loja🏪 ]
+$description[
+``` Temos ```
+**Aliança de Diamante💍**
+|| Serve Para se Casar ||
+¥ 5.000
+
+**🔫Arma**
+|| Serve Para Atirar||
+¥ 15.000]
+$footer[ By MeowTheCat ]
+$newSelectMenu[loja;1;1;Secione um Item!]
+$addSelectMenuOption[loja; Aliança ;Ali; Aliança ;no;💍]
+$addSelectMenuOption[loja; Arma ;Arm; Arma ;no;🔫]
+
+Depois um $onInteraction[loja]
+
+$reply
+$ephemeral
+$if[$message[1]==Ali]
+$onlyIf[$getVar[yens;$authorID]>499;Você Não Tem Esse Dinheiro]
+$onlyIf[$getVar[aliança;$authorID]==❌;Você Já Tem uma Aliança]
+$setVar[yens;$sub[$getVar[yens;$authorID];500];$authorID]
+$setVar[aliança;✅;$authorID]
+$title[ Aliança Comprada ]
+$description[ Só Vai Agr vc Pode Casar! ]
+$endif
+
+$if[$message[1]==Arm]
+$onlyIf[$getVar[yens;$authorID]>14999;Você Não Tem Esse Dinheiro]
+$onlyIf[$getVar[aliança;$authorID]==❌;Você Já Tem uma Aliança]
+$setVar[yens;$sub[$getVar[yens;$authorID];15000];$authorID]
+$setVar[Arma;✅;$authorID]
+$title[ Arma Comprada ]
+$description[ Só Vai Agr vc Pode Meter Bala Nozoto! ]
+$endif
+
+
+
+Parte 1 Tá no Canal DBD BR : https://youtu.be/rJ6mssCD1Hk
